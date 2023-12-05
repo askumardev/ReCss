@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+npm -v--->7.15.1
+npx create-react-app re_css
+cd re_css
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
