@@ -10,7 +10,7 @@ const arrayFun = () => {
     }
   }
   console.log(user);
-  
+
   function transformToObjects(numberArray) {
     // Todo: Add your logic
     // should return an array of objects
@@ -39,8 +39,8 @@ const arrayFun = () => {
   const adminUser ={
     isAdmin: true,
     ...user
-    }
-    console.log(adminUser);
+  }
+  console.log(adminUser);
 };
 
 export default arrayFun;
