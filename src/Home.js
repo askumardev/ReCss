@@ -35,6 +35,8 @@ const user1 = new User("asfd",3);
 console.log(user1);
 user1.sample();
 
+
+
 const Home = () => (
   <div className="home_div">
     <h1>This is from Home Page</h1>

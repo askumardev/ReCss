@@ -1,10 +1,12 @@
-import React from 'react';
+
+import React, { Component } from "react";
 
 import Home from './Home';
 import Form from './Form';
 import './main.css';
 import  myDefaultFunction  from './utils1.js';
 import myDefaultFun from './defaultfunction.js';
+import SampleContainer from './components/sample.js'
 
 myDefaultFunction();
 myDefaultFun("param1", "param2");
@@ -29,6 +31,7 @@ function App() {
       <sub> from App.js</sub>
       <Home />
       <Form />
+      <SampleContainer />
     </div>
   );
 }
