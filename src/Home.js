@@ -35,7 +35,18 @@ const user1 = new User("asfd",3);
 console.log(user1);
 user1.sample();
 
+const arr = ["One","Two","Three","Four"]
+console.log(arr[2]);
+arr.push("Five");
+console.log(arr);
+const index = arr.findIndex((item) => {
+  return item === "Three";
+});
+// const index = arr.findIndex((item) => item === "Three");
+console.log(index);
 
+const newArr = arr.map((item) => item + "!")
+console.log(newArr);
 
 const Home = () => (
   <div className="home_div">
