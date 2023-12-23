@@ -9,8 +9,6 @@ import myDefaultFun from './defaultfunction.js';
 myDefaultFunction();
 myDefaultFun("param1", "param2");
 
-
-
 console.log('hello world from app.js');
 let msg = "some msg";
 let userMessage = "some user msg";
@@ -21,6 +19,7 @@ msg = "new msg";
 console.log(msg);
 console.log(userMessage);
 console.log(constMsg);
+
 
 
 function App() {

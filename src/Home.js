@@ -22,6 +22,18 @@ function cal(a,b,c) {
 }
 cal(10,4,2);
 
+class User {
+  constructor(name, rank) {
+    this.name = name;
+    this.rank = rank;
+  }
+  sample(){
+    console.log("sample method in User class...");
+  }
+}
+const user1 = new User("asfd",3);
+console.log(user1);
+user1.sample();
 
 const Home = () => (
   <div className="home_div">
