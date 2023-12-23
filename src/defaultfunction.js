@@ -29,9 +29,21 @@ const myDefaultFun = (param1, param2) => {
   const {first: firstName, lastName} = {
     first:"askumar",
     lastName: "sklm"
-   };
-   console.log(firstName); 
-   console.log(lastName);
+  };
+  console.log(firstName); 
+  console.log(lastName);
+
+  const arr1 =["one", "two"];
+  const arr2 = ["three"];
+
+  const newArray = [...arr1, ...arr2];
+  console.log(newArray);
+
+  const adminUser ={
+    isAdmin: true,
+    ...user
+   }
+   console.log(adminUser);
 };
 
 export default myDefaultFun;
