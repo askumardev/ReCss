@@ -16,6 +16,13 @@ console.log(hello);
 // greet("hello","kumar");
 // greet(" ","kumar");
 
+function cal(a,b,c) {
+  let d = a * b / c;
+  console.log(d);
+}
+cal(10,4,2);
+
+
 const Home = () => (
   <div className="home_div">
     <h1>This is from Home Page</h1>
