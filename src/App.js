@@ -6,10 +6,12 @@ import Form from './Form';
 import './main.css';
 import  myDefaultFunction  from './utils1.js';
 import myDefaultFun from './defaultfunction.js';
+import arrayFun from './array.js';
 //import SampleContainer from './components/sample.js'
 
 myDefaultFunction();
 myDefaultFun("param1", "param2");
+arrayFun();
 
 console.log('hello world from app.js');
 let msg = "some msg";
