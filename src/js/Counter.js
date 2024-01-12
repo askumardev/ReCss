@@ -9,7 +9,7 @@ function Counter() {
   const handleClick = () => {
     if (value === 100){
       setValue(101);
-      setColor('red');
+      setColor('skyblue');
     }else{
       setValue(100);
       setColor();
