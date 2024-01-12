@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 //import React, { Component } from "react";
 
 import Home from './Home';
@@ -28,6 +29,7 @@ console.log(constMsg);
 
 
 function App() {
+  const [count, setCount] = useState(0);
   // <SampleContainer />
   return (
     <div className="main_div">
@@ -35,7 +37,13 @@ function App() {
       <sub> from App.js</sub>
       <Home />
       <Form />
-      
+      <button onClick={() => {
+        setCount(count + 1);
+      }}> Increment </button>
+      <h1>{count}</h1>
+      <button onClick={() => {
+        setCount(count - 1);
+      }}> Decrement </button>
     </div>
   );
 }
