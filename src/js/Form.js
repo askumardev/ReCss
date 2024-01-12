@@ -16,9 +16,8 @@ function Form() {
     <div className="form_div">
       <p>{text}</p>
       <form onSubmit={handleSubmit}>
-        <label>Enter your name:
-          <input type="text" placeholder="Enter text input" onChange={handleChange}  />
-          <button >Submit</button>
+        <label>Enter name:
+          <input type="text" placeholder="Enter name" onChange={handleChange}  />
         </label>
       </form>
     </div>
