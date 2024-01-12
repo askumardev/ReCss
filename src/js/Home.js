@@ -50,7 +50,7 @@ console.log(newArr);
 
 const Home = () => (
   <div className="home_div">
-    <h1>This is from Home Page</h1>
+    <h2>This is from Home Page</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida,
       risus at dapibus aliquet, elit quam scelerisque tortor, nec accumsan eros.

@@ -1,13 +1,24 @@
 import React from 'react';
+import {useState} from 'react';
 console.log("hello" + " world from form js");
 
 function Form() {
+  const [text, setText] = useState();
+
+  const  handleChange = (event) => {
+    setText(event.target.value);
+  };
+
+  const  handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <div className="form_div">
-      <h1>Form Page</h1>
-      <form>
+      <p>{text}</p>
+      <form onSubmit={handleSubmit}>
         <label>Enter your name:
-          <input type="text" />
+          <input type="text" placeholder="Enter text input" onChange={handleChange}  />
+          <button >Submit</button>
         </label>
       </form>
     </div>
