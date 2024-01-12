@@ -2,14 +2,14 @@ import React from "react";
 import { useState } from "react";
 //import React, { Component } from "react";
 
-import Home from './Home';
-import Form from './Form';
+import Home from './js/Home';
+import Form from './js/Form';
 import Counter from './js/Counter';
 import './styles/main.css';
-import  myDefaultFunction  from './utils1.js';
-import myDefaultFun from './defaultfunction.js';
-import arrayFun from './array.js';
-import promptFun from './prompt.js';
+import  myDefaultFunction  from './js/utils1.js';
+import myDefaultFun from './js/defaultfunction.js';
+import arrayFun from './js/array.js';
+import promptFun from './js/prompt.js';
 //import SampleContainer from './components/sample.js'
 
 myDefaultFunction();
