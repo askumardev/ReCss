@@ -4,7 +4,8 @@ import { useState } from "react";
 
 import Home from './Home';
 import Form from './Form';
-import './main.css';
+import Counter from './js/Counter';
+import './styles/main.css';
 import  myDefaultFunction  from './utils1.js';
 import myDefaultFun from './defaultfunction.js';
 import arrayFun from './array.js';
@@ -37,13 +38,7 @@ function App() {
       <sub> from App.js</sub>
       <Home />
       <Form />
-      <button onClick={() => {
-        setCount(count + 1);
-      }}> Increment </button>
-      <h1>{count}</h1>
-      <button onClick={() => {
-        setCount(count - 1);
-      }}> Decrement </button>
+      <Counter />
     </div>
   );
 }
