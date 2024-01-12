@@ -28,6 +28,16 @@ a {
   margin-top: 7px;
 }
 
+#root1 {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #2e2c2c;
+  padding: 20px 40px;
+  border: solid 1px red;
+  margin-top: 7px;
+  color: #fff;
+}
+
 #flash_notice {
   color: #00B205;
 }
