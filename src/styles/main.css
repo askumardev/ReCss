@@ -19,7 +19,7 @@ a {
   overflow: hidden;
 }
 
-#root {
+#root, #mydiv {
   width: 100%;
   margin: 0 auto;
   background-color: #FFF;
