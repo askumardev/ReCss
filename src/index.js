@@ -29,16 +29,16 @@ root1.render(<App1 />);
 //reportWebVitals();//
 
 
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
 
-import App from "./App";
-import "./index.css";
+// import App from "./App";
+// import "./index.css";
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  rootElement
-);
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   rootElement
+// );
