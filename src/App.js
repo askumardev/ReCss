@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/main.css';
 import Counter from './js/Counter';
 import Calculator from './js/Calculator';
@@ -7,9 +7,9 @@ import Login from './js/Login';
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        
+    
+    <Router> 
+      <div className="App">           
         <Routes>
           <Route path="/" element={<Counter />} />
           <Route path="/login" element={<Login />} />
