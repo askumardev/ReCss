@@ -1,4 +1,5 @@
 .main_div {
+  margin-top: -566px;
   text-align: center;
 }
 
@@ -75,4 +76,64 @@ a {
 
 form .field, form .actions {
   margin: 12px 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #b3bac7;
+}
+
+.calculator {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.display input {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.display .result {
+  font-size: 20px;
+  color: #888;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.buttons button {
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #21a1f1;
 }

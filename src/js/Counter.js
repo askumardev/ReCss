@@ -17,7 +17,6 @@ function Counter() {
   };
   return (
     <div>
-      <button style={{ backgroundColor: color}} onClick={handleClick}>{value}</button><br></br>
       <button onClick={() => {setCount(count+1)}}>Increment</button>
       <h1>{count}</h1>
       <button onClick={() => {setCount(count-1)}}>Decrement</button>
