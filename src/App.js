@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/main.css';
+import Home from './js/Home';
 import Counter from './js/Counter';
 import Calculator from './js/Calculator';
 import Login from './js/Login';
@@ -11,7 +12,8 @@ const App = () => {
     <Router> 
       <div className="App">           
         <Routes>
-          <Route path="/" element={<Counter />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/counter" element={<Counter />} />
           <Route path="/login" element={<Login />} />
           <Route path="/calculator" element={<Calculator />} />
         </Routes>

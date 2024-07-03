@@ -52,8 +52,8 @@ const Home = () => (
   <div className="home_div">
     <h2>This is from Home Page</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida,
-      risus at dapibus aliquet, elit quam scelerisque tortor, nec accumsan eros.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>
+      <tt>Check console...</tt>
     </p>
   </div>
 );
