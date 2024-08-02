@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World</title>
+
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="../styles/sample.css" />
   </head>
   <body>
     <div id="root"></div>
     <div id="root1"></div>
-    <script>
-      const heading = React.createElement("h2", {}, "Hello from React");
-      const root1 = ReactDOM.createRoot(document.getElementById("root1"));
-      root1.render(heading);
+    <script src="../js/sample.js">
+      // const heading = React.createElement("h2", {}, "Hello from React");
+      // const root1 = ReactDOM.createRoot(document.getElementById("root1"));
+      // root1.render(heading);
     </script>
     <script type="text/babel">
       function MyApp() {
