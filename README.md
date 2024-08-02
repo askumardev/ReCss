@@ -6,6 +6,9 @@ cd re_css\
 * //"start": "set PORT=4000 && react-scripts start",\
 <SampleContainer />
 
+npx parcel src/basics/sampleReact.html
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
