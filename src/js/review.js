@@ -1,4 +1,4 @@
-//  node .\src\basics\review.js
+//  node ./src/js/review.js 
 
 const data = [
   {
