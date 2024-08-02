@@ -7,7 +7,8 @@ cd re_css\
 <SampleContainer />
 
 npx parcel src/basics/sampleReact.html
-
+comment in .env file the port(#) if we want parcel to start the server
+else npm start
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
