@@ -1,14 +1,14 @@
 # Getting Started with Create React App
 
 npm -v--->7.15.1\
-npx create-react-app re_css\
+`npx create-react-app re_css\`
 cd re_css\
 * //"start": "set PORT=4000 && react-scripts start",\
 <SampleContainer />
 
-npx parcel src/basics/sampleReact.html
+`npx parcel src/basics/sampleReact.html`
 comment in .env file the port(#) if we want parcel to start the server
-else npm start
+else `npm start`
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
