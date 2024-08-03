@@ -14,7 +14,8 @@ import ReactDOM from 'react-dom/client';
 // const root1 = ReactDOM.createRoot(document.getElementById("root1"));
 // root1.render(jsxHeading);
 const Title = () => (<h2 id="heading" className="heading">Sample Title as Component</h2>)
-const title = (<h2 id="heading" className="heading">Sample Title as react element</h2>);
+const title = (<h2 id="heading1" className="heading1">Sample Title as react element</h2>);
+const data = 1000;
 
 const HeadingComponent1 = () => {
   return <h2 className="funComp1" tabIndex="5">Sample functional component1</h2>;
@@ -22,11 +23,14 @@ const HeadingComponent1 = () => {
 const fc1 = ReactDOM.createRoot(document.getElementById("fc1"));
 fc1.render(<HeadingComponent1 />);
 
+// <Title /> ,  {Title()}  and <Title></Title> are same
 
 const HeadingComponent2 = () => (
   <div id="container">
     <Title />
-    <tt>{title} {2 * 3}</tt>
+    {Title()}
+    <tt>{title}</tt>
+    {data}
     <h2 className="funComp2">Sample functional component2</h2>
   </div>
 );
