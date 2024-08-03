@@ -7,7 +7,6 @@ const styleCard = {
 
 const RestroCard = (props) => {
   const {resData} = props;
-  console.log(resData);
   const {
     imageId,
     name,

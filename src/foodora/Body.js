@@ -4,9 +4,9 @@ import { useState } from "react";
 
 
 const Body = () => {
-  const [listOfRestros, setListOfRestros] = useState([restroList[0],restroList[1]]);
+  const [listOfRestros, setListOfRestros] = useState(restroList);
   //let listOfRestros = restroList;
-  
+
   return (
     <div className="body">
       <div className="search">Search</div>
