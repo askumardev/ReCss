@@ -18,7 +18,7 @@ const RestroCard = (props) => {
   } = resData.data;
   return (
     <div className="res-card" style={styleCard}>
-      <img className="resLogo" alt="resLogo" src={CDN_URL + "MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pav%20Bhaji.png"} />
+      <img className="resLogo" alt="resLogo" src={CDN_URL + imageId} />
       <h3>{name}</h3>
       <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating} stars</h4>
