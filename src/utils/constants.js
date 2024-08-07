@@ -14,7 +14,7 @@ export const restroList = [
       "id": "134",
       "imageId": "/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pav%20Bhaji.png",
       "name": "KFC",
-      "cuisines": ["Burgers", "Pav Bhaji"],
+      "cuisines": ["Snacks", "Pav Bhaji"],
       "costForTwo": 40000,
       "deliveryTime": 36,
       "avgRating": "3.8"
@@ -29,7 +29,67 @@ export const restroList = [
       "cuisines": ["Burgers", "Pizza"],
       "costForTwo": 30000,
       "deliveryTime": 40,
+      "avgRating": "3.5"
+    },
+  },
+  {
+  "data": 
+    {
+      "id": "136",
+      "imageId": "/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pav%20Bhaji.png",
+      "name": "Meghana Biryani",
+      "cuisines": ["Biryani", "Pizza"],
+      "costForTwo": 30000,
+      "deliveryTime": 40,
+      "avgRating": "4.1"
+    },
+  },
+  {
+  "data": 
+    {
+      "id": "137",
+      "imageId": "/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pav%20Bhaji.png",
+      "name": "Nagarjuna",
+      "cuisines": ["Andhra", "Meals"],
+      "costForTwo": 30000,
+      "deliveryTime": 40,
       "avgRating": "4.2"
+    },
+  },
+  {
+  "data": 
+    {
+      "id": "138",
+      "imageId": "/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pav%20Bhaji.png",
+      "name": "ArabianNight",
+      "cuisines": ["Mandi", "Biryani"],
+      "costForTwo": 30000,
+      "deliveryTime": 40,
+      "avgRating": "3.9"
+    },
+  },
+  {
+  "data": 
+    {
+      "id": "139",
+      "imageId": "/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pav%20Bhaji.png",
+      "name": "Nandini Cafe",
+      "cuisines": ["Tea", "Coffee"],
+      "costForTwo": 30000,
+      "deliveryTime": 40,
+      "avgRating": "4.0"
+    },
+  },
+  {
+  "data": 
+    {
+      "id": "140",
+      "imageId": "/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pav%20Bhaji.png",
+      "name": "Udipi Grand",
+      "cuisines": ["Idly", "Vada"],
+      "costForTwo": 30000,
+      "deliveryTime": 40,
+      "avgRating": "4.3"
     },
   },
 ];

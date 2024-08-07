@@ -6,7 +6,15 @@ import Shimmer from "./Shimmer";
 
 
 const Body = () => {
-  const [listOfRestros, setListOfRestros] = useState(restroList);
+  console.log("Body");
+  // const [listOfRestros, setListOfRestros] = useState(restroList);
+  // const [filteredlistOfRestros, setfilteredlistOfRestros] = useState(restroList);
+
+   const [listOfRestros, setListOfRestros] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+
+  const [searchText, setSearchText] = useState("");
+
   //let listOfRestros = restroList;
   useEffect(() => {
     console.log("useEffect");
@@ -17,36 +25,54 @@ const Body = () => {
     const data = await fetch(BASE_URL);
 
     const json = await data.json();
-    console.log(json);
-    //console.log(json.data.cards[1].card.card.gridElements.infoWithStyle);
+    console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     //listOfRestros = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
     //console.log(listOfRestros);
-    //setListOfRestros(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+    setListOfRestros(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
-  // if (listOfRestros.length === 0){
-  //   return <Shimmer />
-  // }
 
   return listOfRestros.length === 0 ? (<Shimmer />) : (
     <div className="body">
-      <div className="search">Search</div>
+      
       <div className="filter">
+        <div className="searchBox">
+          <input
+            type="text"
+            data-testid="searchInput"
+            className="border border-solid border-black"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button className="searchBtn" onClick={()=>{
+            const filteredData = listOfRestros.filter(
+              (res) => res.data.name.toLowerCase().includes(searchText.toLowerCase()));
+            console.log(filteredData);
+            const filteredRestaurant = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+
+              setFilteredRestaurant(filteredRestaurant);
+          }}>Search</button>
+        </div>
         <button className="filterBtn" 
           onClick={() => {
             console.log("Button clicked...");
             filteredList = listOfRestros.filter(
-              (res) => res.data.avgRating > 4
+              (res) => res.info.avgRating >= 4.4
             );
             console.log(filteredList);
-            setListOfRestros(filteredList);
+            setFilteredRestaurant(filteredList);
           }}>
           Top Restaurants
         </button>
       </div>
       <div className="restro-container">
-        {listOfRestros.map((rest,index) => (
-          <RestroCard key={rest.data.id} resData={rest} />
+        {filteredRestaurant.map((rest,index) => (
+          <RestroCard key={rest?.info.id} resData={rest} />
           ))}
       </div>
     </div>

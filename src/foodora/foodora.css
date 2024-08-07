@@ -53,6 +53,12 @@ body {
 
 .filterBtn{
 	cursor: pointer;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.filter{
+	margin-top: 5px;
 }
 
 .shimmer-container {
@@ -70,4 +76,8 @@ body {
 .loginBtn{
 	padding: 0 20px;
 	cursor: pointer;
+}
+
+.filter{
+	display: flex;
 }
