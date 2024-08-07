@@ -1,11 +1,26 @@
 import RestroCard from "./RestroCard";
 import { restroList } from "../utils/constants";
-import { useState } from "react";
+import { BASE_URL } from "../utils/constants";
+import { useState, useEffect } from "react";
 
 
 const Body = () => {
   const [listOfRestros, setListOfRestros] = useState(restroList);
   //let listOfRestros = restroList;
+  useEffect(() => {
+    console.log("useEffect");
+    fetchData();
+  }, []);
+
+  const fetchData = async() => {
+    const data = await fetch(BASE_URL);
+
+    const json = await data.json();
+    console.log(json.data.cards[1].card.card.gridElements.infoWithStyle);
+    //listOfRestros = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+    //console.log(listOfRestros);
+    //setListOfRestros(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+  }
 
   return (
     <div className="body">
