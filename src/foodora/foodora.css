@@ -81,3 +81,8 @@ body {
 .filter{
 	display: flex;
 }
+
+.homeIcon{
+	height: 25px;
+	width: 25px;
+}

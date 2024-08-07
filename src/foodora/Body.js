@@ -10,9 +10,8 @@ const Body = () => {
   // const [listOfRestros, setListOfRestros] = useState(restroList);
   // const [filteredlistOfRestros, setfilteredlistOfRestros] = useState(restroList);
 
-   const [listOfRestros, setListOfRestros] = useState([]);
+  const [listOfRestros, setListOfRestros] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-
   const [searchText, setSearchText] = useState("");
 
   //let listOfRestros = restroList;
@@ -49,9 +48,9 @@ const Body = () => {
           />
           <button className="searchBtn" onClick={()=>{
             const filteredData = listOfRestros.filter(
-              (res) => res.data.name.toLowerCase().includes(searchText.toLowerCase()));
+              (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
             console.log(filteredData);
-            const filteredRestaurant = listOfRestaurants.filter((res) =>
+            const filteredRestaurant = listOfRestros.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
 
