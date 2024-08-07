@@ -2,6 +2,7 @@ import RestroCard from "./RestroCard";
 import { restroList } from "../utils/constants";
 import { BASE_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 
 const Body = () => {
@@ -16,13 +17,18 @@ const Body = () => {
     const data = await fetch(BASE_URL);
 
     const json = await data.json();
-    console.log(json.data.cards[1].card.card.gridElements.infoWithStyle);
+    console.log(json);
+    //console.log(json.data.cards[1].card.card.gridElements.infoWithStyle);
     //listOfRestros = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
     //console.log(listOfRestros);
     //setListOfRestros(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
   }
 
-  return (
+  // if (listOfRestros.length === 0){
+  //   return <Shimmer />
+  // }
+
+  return listOfRestros.length === 0 ? (<Shimmer />) : (
     <div className="body">
       <div className="search">Search</div>
       <div className="filter">
