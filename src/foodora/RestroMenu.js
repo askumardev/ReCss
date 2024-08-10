@@ -1,7 +1,13 @@
 import { useEffect } from "react";
 import { MENU_API } from "../utils/constants";
+import { useParams } from "react-router-dom";
+
 
 const RestroMenu = () => {
+
+  const { resId } = useParams();
+  const resInfo = useRestaurantMenu(resId);
+
   useEffect(() => {
     console.log("useEffect");
     //fetchData();
@@ -13,7 +19,10 @@ const RestroMenu = () => {
     console.log(json.data);
   };
   return (
-    <div className="menu">      
+    <div className="menu">
+      {filteredRestaurant.map((rest) => (
+        <Link key={"restaurants/"+ rest.data.id}> <RestroCard key={rest.data.id} resData={rest} /> </Link>
+        ))} 
       <h1>Restro menu Page</h1>
         <ul>
           <li>Pizza</li>
