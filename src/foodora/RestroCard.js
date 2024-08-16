@@ -14,7 +14,7 @@ const RestroCard = (props) => {
     cuisines,
     costForTwo,
     sla,
-  } = resData?.info;
+  } = resData;
   return (
     <div className="res-card m-4 p-4 w-[250px] bg-gray-50 hover:bg-gray-200" /* style={styleCard} **/>
       <img className="resLogo rounded-lg" alt="resLogo" src={CDN_URL + cloudinaryImageId} />

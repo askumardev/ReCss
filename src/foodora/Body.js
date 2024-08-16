@@ -4,6 +4,7 @@ import { BASE_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
 const Body = () => {
@@ -83,11 +84,15 @@ const Body = () => {
       </div>
       
       <div className="restro-container flex flex-wrap m-4">
-        {filteredRestaurant.map((rest,index) => (
-          <RestroCard key={rest?.info.id} resData={rest} />
-          ))}
+        {filteredRestaurant.map((restaurant) =>(
+          <Link key={restaurant?.info.id}
+            to={"/restaurants/" + restaurant?.info.id}>
+            <RestroCard resData={restaurant?.info} />
+          
+          </Link>
+        ))};
       </div>
-    </div>
+      </div>
   );
 };
 
