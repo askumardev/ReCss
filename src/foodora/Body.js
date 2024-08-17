@@ -1,10 +1,11 @@
 import RestroCard from "./RestroCard";
 import { restroList } from "../utils/constants";
 import { BASE_URL } from "../utils/constants";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 
 const Body = () => {
@@ -34,6 +35,7 @@ const Body = () => {
   }
 
   const onlineStatus = useOnlineStatus();
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   if (onlineStatus === false)
     return (
@@ -79,8 +81,16 @@ const Body = () => {
             setFilteredRestaurant(filteredList);
           }}>
           Top Restaurants
-          </button>
-        </div>       
+          </button>          
+        </div>
+        <div className="search m-4 p-4 flex items-center">
+            <label>UserName : </label>
+            <input
+              className="border border-black p-2"
+              value={loggedInUser}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>    
       </div>
       
       <div className="restro-container flex flex-wrap m-4">

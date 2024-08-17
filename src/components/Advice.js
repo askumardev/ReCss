@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <div>
-      <h1>{advice}</h1>
+      <h1 className="font-bold">{advice}</h1>
       <button onClick={getAdvice}>Get advice</button>
       <Message count={count} />
     </div>

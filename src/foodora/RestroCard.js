@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const styleCard = {
   backgroundColor: "#f0f0f0",
@@ -7,6 +9,8 @@ const styleCard = {
 
 const RestroCard = (props) => {
   const {resData} = props;
+  const { loggedInUser } = useContext(UserContext);
+
   const {
     cloudinaryImageId,
     name,
@@ -23,6 +27,7 @@ const RestroCard = (props) => {
       <h4>{avgRating} stars</h4>
       <h5>{costForTwo}</h5>
       <h5>{sla.slaString}</h5>
+      <h4>User : {loggedInUser} </h4>
     </div>
   );
 };

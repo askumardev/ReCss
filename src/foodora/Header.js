@@ -1,12 +1,15 @@
 
 import { LOGO_URL } from "../utils/constants";
 import { HOME_ICON_URL } from "../utils/constants";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { Link } from 'react-router-dom';
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+
+  const { loggedInUser } = useContext(UserContext);
 
   useEffect(() => {
     console.log("useEffect");
@@ -31,6 +34,7 @@ const Header = () => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}>{btnName}
           </button>
+          <li className="px-4 ">{loggedInUser}</li>
         </ul>
       </div>
     </div>

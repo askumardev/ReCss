@@ -2,6 +2,8 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import UserContext from "../utils/UserContext";
+//import { Provider } from "react-redux";
 import Header from "./Header";
 import Body from "./Body";
 import About from "./About";
@@ -10,12 +12,26 @@ import Error from "./Error";
 import RestroMenu from "./RestroMenu";
 
 const  Grocery = lazy(() => import("./Grocery"));
+const  About = lazy(() => import("./About"));
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    // Make an API call and send username and password
+    const data = {
+      name: "Satish Kumar",
+    };
+    setUserName(data.name);
+  }, []);
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    //<Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    //</Provider>
   )
 }
 
