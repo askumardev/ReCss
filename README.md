@@ -21,6 +21,9 @@ module.exports = {
   presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
 };
 
+npm i -D @babel/preset-react
+npm install --save-dev @testing-library/jest-dom
+
 * npm run test
 
 
